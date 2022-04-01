@@ -51,5 +51,5 @@ Use one of the following methods instead:
 - `Ctrl+C`, since `SIGINT` signal is handled (only tested on Linux)
 - a plain `kill` command, since `SIGTERM` is handled (only tested on Linux)
 
-If you run the bot inside the Docker container, stop the container with `-t` option to allow the bot have enought time to update data on Google Sheet
-- e.g., to give Docker wait up to 60 seconds before force stop the container, use `docker stop -t 60 __CONTAINER_NAME__`
+If you run the bot inside a Docker container, stop the container with `-t` option to allow the bot to update transactions to Google Sheet
+- e.g., to tell Docker wait up to 60 seconds before force stop the container, use `docker stop -t 60 __CONTAINER_NAME__`
