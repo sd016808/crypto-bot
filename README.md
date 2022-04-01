@@ -34,3 +34,14 @@ Trading cryptocurrencies on Binance 24 hours a day, 7 days a week.
 
 ## Entry point?
 Run `python get_data.py`
+
+## How to quit the app?
+**NEVER** use `kill -9` command or other means to force termintate the program, otherwise position management and record on Google Sheet may become corrupt.
+
+Use one of the following methods instead:
+- `Ctrl+C`, since `SIGINT` signal is handled
+- a plain `kill` command, since `SIGTERM` is handled
+- put a file named `stoppp` in the root folder of the app
+
+If you run the bot inside the Docker container, stop the container with `-t` option to allow the bot have enought time to update data on Google Sheet
+- e.g., to give Docker wait up to 60 seconds before force stop the container, use `docker stop -t 60 __CONTAINER_NAME__`
