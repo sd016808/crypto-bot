@@ -10,6 +10,14 @@ Trading cryptocurrencies on Binance 24 hours a day, 7 days a week.
 - 交易歷史、倉位紀錄保存在本地 json 文字檔，方便 version control
 - Works on Windows/Linux
 
+## Want to take a deep look into the source code?
+- `get_data.py`: entry point of the bot, where the big endless while loop is here
+- `crypto_report.py`: business logic related to updating transaction history to Google Sheet
+- `send_order.py`: 與幣安 API 的串接
+- `config.py` configuration files loader
+- `file_based_asset_positions.py`: crypto position management module
+- `notification_platforms/` folders where push notification implementations are
+
 ## How to get started?
 
 ### Setup environment
